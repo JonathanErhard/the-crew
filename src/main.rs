@@ -1,9 +1,13 @@
 mod the_crew;
-mod mission_cards;
+
+use the_crew::mission::MISSION_G9;
+use the_crew::player::PlayerInterface;
+
+use crate::the_crew::player::TerminalInterface;
 
 fn main() {
-    let missions = vec![mission_cards::MISSION_G9];
-    let mut game = the_crew::Game{m_num_players:4,m_missions:missions};
+    let missions = vec![MISSION_G9];
+    let mut game = the_crew::Game{m_num_players:3,m_missions:missions,m_players:Vec::new()};
     if game.play(){
         print!("WOWZEE YOU DID IT!")
         } else {
