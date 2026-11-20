@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+atomic = "0.6.1"
 inline_colorization = "0.1.6"
 rand = "0.10.3"
